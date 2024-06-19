@@ -823,7 +823,7 @@ contract TokenVestingLock is Ownable {
     address public constant tokenAddress = 0x0000000000000000000000000000000000000000;
     
     // Vesting time for the tokens
-    uint public lockDuration = 30 minutes;
+    uint public constant lockDuration = 30 minutes;
     
     // DON'T Change This - Unlock 100% Tokens over lockDuration
     uint public constant unlockRate = 100e2;
@@ -835,7 +835,7 @@ contract TokenVestingLock is Ownable {
     uint public constant releaseProcent = 5e2;
 
     // Cliff time for the TGE amount.
-    uint public cliff = 10 minutes;
+    uint public constant cliff = 10 minutes;
     
     // ======== END CONTRACT VARIABLES ===============
 
