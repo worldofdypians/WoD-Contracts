@@ -703,6 +703,7 @@ contract WorldOfDypians is ERC20("World of Dypians", "WoD"), Ownable {
     /// @notice Creates max supply of WoD
     constructor(uint256 MAX_SUPPLY_TOKEN) Ownable(msg.sender) {
         MAX_SUPPLY = MAX_SUPPLY_TOKEN;
+        _mint(msg.sender, MAX_SUPPLY_TOKEN);
     }
 
 }
