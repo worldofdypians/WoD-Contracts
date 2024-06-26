@@ -692,10 +692,10 @@ contract Bridge is Ownable, ReentrancyGuard {
     // deposit index for current chain
     uint public lastDepositIndex;
     
-    function setVerifyAddress(address newVerifyAddress) external noContractsAllowed onlyOwner {
+    function setVerifyAddress(address newVerifyAddress) external onlyOwner {
         verifyAddress = newVerifyAddress;
     }
-    function setDailyLimit(uint newDailyTokenWithdrawLimitPerAccount) external noContractsAllowed onlyOwner {
+    function setDailyLimit(uint newDailyTokenWithdrawLimitPerAccount) external onlyOwner {
         dailyTokenWithdrawLimitPerAccount = newDailyTokenWithdrawLimitPerAccount;
     }
     
