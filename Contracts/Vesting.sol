@@ -935,6 +935,9 @@ contract TokenVestingLock is Ownable {
         // Owner is able to add vestingWallets only 1 time.
         require(!startVesting, "Wallets already added.");
 
+        // Checking length of those 2 arrays.
+        require(_holders.length == _amountToClaim.length, "Length not matching.");
+
         // Enable the vesting contract.
         startVesting = true;
 
