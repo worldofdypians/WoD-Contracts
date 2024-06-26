@@ -700,10 +700,14 @@ abstract contract Ownable is Context {
 
 contract WorldOfDypians is ERC20("World of Dypians", "WoD"), Ownable {
     uint256 public immutable  MAX_SUPPLY;
+
+    // TokenLock Contract Address.
+    address public constant tokenLockAddress = 0x0000000000000000000000000000000000000000;
+    
     /// @notice Creates max supply of WoD
     constructor(uint256 MAX_SUPPLY_TOKEN) Ownable(msg.sender) {
         MAX_SUPPLY = MAX_SUPPLY_TOKEN;
-        _mint(msg.sender, MAX_SUPPLY_TOKEN);
+        _mint(tokenLockAddress, MAX_SUPPLY_TOKEN);
     }
 
 }
